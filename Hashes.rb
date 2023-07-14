@@ -73,3 +73,4 @@ person = {name: 'bob' , occ: 'web' , hob: 'hey'}
 # a={ name: "pari" ,:name1 => 'shubh' , name2: 'palak'}
 # # puts a.select{|key, value| key=='ghgh'}
 # puts a.select{|key, value| key==:name1 }
+puts "updated"
