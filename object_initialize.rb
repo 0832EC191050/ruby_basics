@@ -16,3 +16,4 @@ end
  
 per = Person.new("Shubhank", 21, "Male")
 per.details
+
