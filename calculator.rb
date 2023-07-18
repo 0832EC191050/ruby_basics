@@ -1,4 +1,4 @@
-
+# Flow Control - Calculator:** Create a Calculator class with methods for addition, subtraction, multiplication, and division. Implement flow control to allow the user to choose the operation and input the numbers. Display the result to the user.
 class Calculator
 
   attr_accessor :a, :b
@@ -8,7 +8,8 @@ class Calculator
     @b=b
   end
 
-  def add
+  def add()
+    
     a + b
   end
 
@@ -24,17 +25,17 @@ class Calculator
 
   def divide
     a / b
-  rescue ZeroDivisionError => e 
+  rescue TypeError => e 
     "Error: #{e.message}"
   end
  
 
 end
 
-calc = Calculator.new(6, 'a')
-p "sum = #{calc.add}"
-p "substraction = #{calc.substract}"
-p "multiplication = #{calc.multiply}"
-p "Divide reult = #{calc.divide}"
+calc = Calculator.new(3,2)
+p "sum = #{calc.add()}"
+# p "substraction = #{calc.substract}"
+# p "multiplication = #{calc.multiply}"
+# p "Divide reult = #{calc.divide}"
 
 
