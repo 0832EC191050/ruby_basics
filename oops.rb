@@ -109,33 +109,170 @@
 # sparky.name = "Paritosh"
 # puts sparky.name
 
-class GoodDog
-  attr_accessor :name , :height , :weight 
+# class GoodDog
+#   attr_accessor :name , :height , :weight 
 
-    def initialize(n , h ,w)
-      @name = n
-      @height = h 
-      @weight = w
-    end
+#     def initialize(n , h ,w)
+#       @name = n
+#       @height = h 
+#       @weight = w
+#     end
      
-    def change_info(n, h, w)
-      @nmae = n 
-      @height = h
-      @weight = w 
-    end
+#     def change_info(n, h, w)
+#       @name = n 
+#       @height = h
+#       @weight = w 
+#     end
 
 
-    def speak
-        "#{name} says arf"
-    end
+#     def speak
+#         "#{name} says arf"
+#     end
 
-    def info 
-      puts "name "
-end
+#     def info 
+#       puts "#{name} weight is #{weight}, #{height}m tall"
+#     end
+# end
 
-sparky = GoodDog.new("Sparky") 
-puts sparky.speak 
-sparky.name = "Paritosh"
-puts sparky.name
+# sparky = GoodDog.new("Sparky", 12 , 30) 
+# puts sparky.speak 
+# puts sparky.info
+# sparky.change_info("Shubhank", 14, 50)
+# puts sparky.info
+
+
+# class GoodDog
+#   attr_accessor :name , :height , :weight 
+
+#     def initialize(n , h ,w)
+#       @name = n
+#       @height = h 
+#       @weight = w
+#     end
+     
+#     def change_info(n, h, w)
+#       self.name = n 
+#       self.height = h
+#       self.weight = w 
+#     end
+
+
+#     def speak
+#         "#{name} says arf"
+#     end
+
+#     def info 
+#       puts "#{name} weight is #{weight}, #{height}m tall"
+#     end
+# end
+
+# sparky = GoodDog.new("Sparky", 12 , 30) 
+# puts sparky.speak 
+# puts sparky.info
+# sparky.change_info("Shubhank", 14, 50)
+# puts sparky.info
+
+
+
+
+# class GoodDog
+#   attr_accessor :name , :height , :weight 
+
+#     def initialize(n , h ,w)
+#       @name = n
+#       @height = h 
+#       @weight = w
+#     end
+     
+#     def change_info(n, h, w)
+#       self.name = n 
+#     self.height = h
+#       self.weight = w 
+#     end
+
+
+#     def speak
+#         "#{name} says arf"
+#     end
+
+#     def info 
+#       puts "#{name} weight is #{weight}, #{height}m tall"
+#     end
+
+#     def some_method
+#       self.info
+#     end
+# end
+
+# sparky = GoodDog.new("Sparky", 12 , 30) 
+# puts sparky.speak 
+# puts sparky.info
+# sparky.change_info("Shubhank", 14, 50)
+# sparky.some_method
+
+#  class MyCar
+#   attr_accessor :year , :color , :model
+#   def initialize(year, color, model)
+#     @year = year
+#     @color = color
+#     @model = model
+#     @current_speed = 0
+#   end
+ 
+#   def allow(year, color, model)
+#     self.year = year
+#     self.color = color 
+#     self.model = model 
+#   end
+
+#   def  show()
+#     puts "year: #{year}" , "color: #{color}" , "model: #{model}"
+#    end   
+ 
+
+#   def speed_up(number) 
+#     @current_speed += number
+#     puts "your current speed _up speed is:- #{@current_speed}"
+#   end
+
+#   def brake(number)
+#     @current_speed -= number 
+#     puts "Your deaccelrate current_speed  is:- #{@current_speed}" 
+#   end 
+
+#   def shut()
+#     @current_speed = 0 
+#     puts "Lets park the boy"
+#   end
+
+# end
+ 
+# my = MyCar.new(2001 , "white" , "Yamaha123")
+# my.show
+# my.speed_up(20)
+# my.brake(20)
+# my.shut
+# my.allow(2000 , "yellow" , "Yamaha5906")
+# my.show
+
+# class MyCar
+#   attr_accessor :color
+#   attr_reader :year
+
+#   # ... rest of class left out for brevity
+
+#   def spray_paint(color)
+#     self.color = color
+#     puts "Your new #{color} paint job looks great!"
+#   end
+# end
+# lumina = MyCar.new
+# lumina.spray_paint('red')
+
+
+
+
+
+
 
 
