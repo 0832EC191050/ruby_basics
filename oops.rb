@@ -269,10 +269,285 @@
 # lumina = MyCar.new
 # lumina.spray_paint('red')
 
+# class Example 
+#   def initialize(name, age)
+#     @name = name 
+#     @age = age 
+#   end
+
+#   def name 
+#     puts @name
+#   end
+  
+#   def age 
+#    puts @age
+#   end
+
+#   def name=(name)
+#     puts name
+#   end
+
+#   def age=(age)
+#     puts age
+#   end
+# end
+
+# ex = Example.new("shubh", 21)
+# ex.name = "Shubh"
+# ex.name
+# ex.age = "22"
+# ex.age
+
+# class Example 
+#   attr_reader :name, :age
+#   def initialize(name, age)
+#     @name = name 
+#     @age = age 
+#   end
+
+#   def name=(name)
+#     puts name
+#   end
+
+#   def age=(age)
+#     puts age
+#   end
+# end
+
+# ex = Example.new("shubh", 21)
+# # ex.name = "Shubh"
+# ex.name
+# # ex.age = "22"
+# ex.age
+
+# class Example 
+#   attr_writer :name, :age
+#   def initialize(name, age)
+#     @name = name 
+#     @age = age 
+#   end
+
+#   def name 
+#     puts @name
+#   end
+  
+#   def age 
+#    puts @age
+#   end
+# end
+
+# ex = Example.new("shubh", 21)
+# ex.name = "Shubh"
+# ex.name
+# ex.age = "22"
+# ex.age
+
+# class Example 
+#   attr_accessor :name, :age
+#   def initialize(name, age)
+#     @name = name 
+#     @age = age 
+#   end
+   
+#   def access 
+#     puts name 
+#     puts age
+#   end
+
+# end
+
+# ex = Example.new("shubh", 21)
+# ex.access
+# ex.name = "Shubh"
+# ex.name
+# ex.age = "22"
+# ex.age
+
+# ------------------------------class and object II--------------------------------
+
+# class GoodDog
+#   def self.we_are
+#     puts "Something"
+#   end
+# end
+# GoodDog.we_are
+
+# class GoodDog 
+#   @@total_number_of_dog = 0 
+
+#   def initialize
+#     @@total_number_of_dog += 1
+#   end
+  
+#   def self.class_method
+#     @@total_number_of_dog
+#   end
+# end
+
+# puts GoodDog.class_method
+# GoodDog.new
+# GoodDog.new
+# puts GoodDog.class_method
+
+# class GoodDog
+#   Const = 7 
+
+#   attr_accessor :name, :age
+
+#   def initialize(n, a)
+#     self.name = n 
+#     self.age = a*Const
+#   end
+# end
+
+# obj = GoodDog.new("Shubh", 21)
+# puts obj.age
+# puts obj
+
+# class GoodDog
+#   Const = 7 
+
+#   attr_accessor :name, :age
+
+#   def initialize(n, a)
+#     @name = n 
+#     @age = a*Const
+#   end
+
+#   def to_s
+#     puts"name is #{name}, age is #{age}"
+#   end
+
+# end
+
+# obj = GoodDog.new("Shubh", 21)
+# # puts obj.age
+# puts obj
+# p obj
+
+
+# class GoodDog
+#   Const = 7 
+
+#   attr_accessor :name, :age
+
+#   def initialize(n, a)
+#     self.name = n 
+#     self.age = a*Const
+#   end
+
+#   def to_s
+#     puts"name is #{name}, age is #{age}"
+#   end
+
+# end
+
+# obj = GoodDog.new("Shubh", 3)
+# # puts obj.age
+# puts obj
+# p obj
 
 
 
+# class GoodDog
+#   Const = 7 
+
+#   attr_accessor :name, :age
+
+#   def initialize(n, a)
+#     @name = n 
+#     @age = a*Const
+#   end
+
+#   def to_s
+#     puts"name is #{name}, age is #{age}"
+#   end
+
+# end
+
+# obj = GoodDog.new("Shubh", 21)
+# # puts obj.age
+# puts "#{obj}"
+# p "#{obj}"
+
+# --------------------------Overiding to_s------------------------------
 
 
+# class GoodDog
+#   def to_s
+#     42
+#   end
+# end
+
+# obj = GoodDog.new
+# puts obj
+# puts "object is#{obj}"
+
+# class GoodDog
+#   def to_s
+#     "42"
+#   end
+# end
+
+# obj = GoodDog.new
+# puts obj
+# puts "object is #{obj}"
+
+# class GoodDog 
+
+#   attr_accessor :xyz
+#   def initialize
+#     @xyz = {a: 1, b:2}
+#   end
+
+#   def to_s
+#     puts "This is Something"
+#   end
+# end
+
+# obj = GoodDog.new
+# puts obj
+# puts obj.xyz
+
+# class GoodDog
+#   attr_accessor :name, :height, :weight
+
+#   def initialize(n, h, w)
+#     self.name   = n
+#     self.height = h
+#     self.weight = w
+#   end
+
+#   def change_info(n, h, w)
+#     self.name   = n
+#     self.height = h
+#     self.weight = w
+#   end
+
+#   def info
+#     "#{self.name} weighs #{self.weight} and is #{self.height} tall."
+#   end
+
+#   def what_is_self
+#     self
+#   end
+# end
+
+# sparky = GoodDog.new('Sparky', '12 inches', '10 lbs')
+# p sparky.what_is_self
+
+# class Person
+#   attr_accessor :name
+#   attr_writer :name ## => This also works but doesn't allow getter access
+#   def initialize(name)
+#     @name = name
+#   end
+# end
+
+# bob = Person.new("Steve")
+# bob.name = "Bob"
+#  puts bob.name
+
+# -------------------------------------------Inheritance--------------------------------------------------
 
 
