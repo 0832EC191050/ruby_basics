@@ -551,3 +551,113 @@
 # -------------------------------------------Inheritance--------------------------------------------------
 
 
+# class Animal 
+#   def speak 
+#     "Hello"
+#   end
+# end
+
+# class GoodDog < Animal 
+#   attr_accessor :name 
+
+#   def initialize(n)
+#     self.name = n 
+#   end
+
+#   def speak 
+#     "#{name} is Arf"
+#   end
+# end
+
+# class Cat  < Animal
+# end
+
+# obj = GoodDog.new("Paritosh")
+# obj1 = Cat.new
+
+# puts obj.speak 
+# puts obj1.speak 
+
+
+
+
+
+
+
+# class Animal 
+#   def speak 
+#     "Hello"
+#   end
+# end
+
+# class GoodDog < Animal 
+#   attr_accessor :name 
+
+#   def initialize(n)
+#     super()
+#     self.name = n 
+#   end
+
+#   def speak 
+#     "#{name} is Arf"
+#   end
+# end
+
+# class Cat  < Animal
+# end
+
+# obj = GoodDog.new("Paritosh")
+# obj1 = Cat.new
+
+# puts obj.speak 
+# # puts obj1.speak 
+
+# _____________________________EXECERCISE___________________________________
+
+# 1.
+
+# class Vehicle
+#   def self.gas_milage(gas, milage)
+#     puts "#{gas/milage} is the answer" 
+#   end
+# end
+
+# class MyCar < Vehicle 
+#   Const = 4
+# end
+
+# class MyTruck < Vehicle 
+#   Const = 5
+# end
+
+# obj1 = MyCar.new
+# obj2 = MyTruck.new
+# puts Vehicle.gas_milage(20, 4)
+# puts obj1
+# puts obj2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

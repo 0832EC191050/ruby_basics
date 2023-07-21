@@ -1,20 +1,24 @@
 # 1.**Class and Object Creation:** Create a class called "Rectangle" with attributes "length" and "width". Implement methods to calculate the area and perimeter of the rectangle. Create an object of the class and demonstrate the usage of these methods.
 
 # class Rectangle
-# @@length=5 
-# @@width=2
+#   @@length=5 
+#   @@width=2
 # def calculate_area
-# @area = @@length*@@width
-# puts "the are of reactangle is :- #{@area}"
+#   @area = @@length*@@width
+#   puts "the are of reactangle is :- #{@area}"
 # end 
-# def calculate_perimetere
+
+#  def calculate_perimetere
 #     @perimetere = 2*@@length+2*@@width
 #     puts "perimetere of rectangle is :- #{@perimetere}"
+#  end
 # end
-# end
+
 # a=Rectangle.new
 # a.calculate_area
 # a.calculate_perimetere
+
+
 # 2.**Inheritance:** Create a base class called "Shape" with a method to calculate the area. Create two derived classes, "Circle" and "Square," that inherit from the Shape class and implement their own versions of the area calculation method. Create objects of both derived classes and demonstrate the usage of the area calculation methods.
 
 #class Shape
@@ -97,7 +101,6 @@
 # 4. **Loop - Array Manipulation:** Create a class called "ArrayManipulator" with a method that takes an array of numbers as input and returns a new array that contains only the even numbers from the original array. Demonstrate the usage of this method with an example.
 
 class ArrayManipulator
-
   def input_array
     puts "Enter the size of array"
       n= gets.chomp.to_i
@@ -135,9 +138,5 @@ a.access
 #     puts a[i]
 # end
 # --------------------------------------------------------------------------
-
-# # 5.
-# class UserDatabase 
-#     def add_user
 
 

@@ -1,4 +1,4 @@
-# Flow Control - Calculator:** Create a Calculator class with methods for addition, subtraction, multiplication, and division. Implement flow control to allow the user to choose the operation and input the numbers. Display the result to the user.
+3.# Flow Control - Calculator:** Create a Calculator class with methods for addition, subtraction, multiplication, and division. Implement flow control to allow the user to choose the operation and input the numbers. Display the result to the user.
 class Calculator
 
   attr_accessor :a, :b
