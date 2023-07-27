@@ -140,3 +140,208 @@ a.access
 # --------------------------------------------------------------------------
 
 
+# **Loop - Array Search and Manipulation:** Create a class called "ArrayProcessor" with methods to search for a specific element in an array and return its index. Implement a separate method to square each element of the array and return the updated array. Demonstrate the usage of these methods with sample data.
+
+
+class ArrayProcessor 
+  def search 
+    @arr = [1,2,3,4,5]
+    print "Enter element to search"
+    input = gets.chomp.to_i
+      for i in 0..@arr.length 
+        flag = 0
+      for  i in 1..@arr.length 
+        if (@arr[i] == input) 
+          flag += 1
+            break;
+        end
+      end
+        if (flag ==1 )
+          puts "element found at index : #{i}"
+            break
+        else 
+          puts "element not in array"
+          break
+        end 
+      end
+  end
+    
+  def square_array 
+    @arr = [1,2,3,4,5]
+    @arr.map{|n| n**2} 
+  end
+end 
+
+a = ArrayProcessor.new()
+a.search 
+puts a.square_array
+
+
+
+
+
+# **Hash Manipulation - User Database:** Create a class called "UserDatabase" that represents a simple user database. Implement methods to add a user, retrieve user details by username, and delete a user. Demonstrate the usage of these methods with sample data.
+
+class UserDatabase
+  attr_accessor :username, :age, :post
+  def initialize
+      @username
+      @age
+      @post
+      @hash_value = {}
+  end
+
+  def add_user
+    i = 3
+    while i > 0
+      puts "Enter the username"
+        username = gets.chomp
+        @hash_value[username] = {}
+      puts "Enter the age"
+        age =gets.chomp
+        @hash_value[username][:age] = age
+      puts "Enter the post"
+        post =gets.chomp
+        @hash_value[username][:post] = post 
+      puts "now your current hash is: #{@hash_value}"
+        i -= 1
+      end    
+  end
+
+  def user_details
+    print "Enter the key that you want to access:- "
+      username = gets.chomp
+    puts @hash_value.dig(username)
+  end
+
+  def delete
+      print "Enter the key that you want to delete:- "
+        username = gets.chomp 
+      puts @hash_value.delete(username)
+  end
+  
+  def show 
+    print "no your current hash is:-  #{@hash_value}"
+  end
+
+end
+
+user = UserDatabase.new
+user.add_user
+user.user_details
+user.delete
+user.show
+
+
+
+
+class BankAccount 
+  attr_accessor :account_number, :balance  
+  def initialize(account_number, balance)
+     @account_number = account_number
+     @balance = balance 
+  end
+  
+  def withdraw_money(b)
+     puts"money withdraw is: #{b.balance}" 
+  end 
+
+  def deposit_money(b, b1)
+   #   b1.account_number = b.balance
+     puts"money deposited is: #{b1.balance} to account number-#{b1.account_number}"
+     total = b.balance+b1.balance
+     puts "now the total balance is #{total}" 
+  end
+
+end 
+
+b = BankAccount.new(123456789, 500)
+b1 = BankAccount.new(12345689, 600)
+b.withdraw_money(b)
+
+# 6. **Object Initialization:** Create a class called "Person" with attributes for name, age, and gender. Implement a constructor to initialize these attributes. Create objects of the class and demonstrate the initialization process.
+class Person
+  def initialize(name, age, gender)
+      @name = name
+      @age = age
+      @gender = gender
+  end
+
+  def details()
+    puts "Name is:- #{@name}"
+    puts "Age is:- #{@age}"
+    puts "Gender is:- #{@gender}"
+  end
+
+end
+
+per = Person.new("Shubhank", 21, "Male")
+per.details
+
+# . **Flow Control - Guessing Game:** Create a class called "GuessingGame" that allows the user to guess a randomly generated number. Implement flow control to provide hints to the user (e.g., "higher" or "lower") based on their guesses. Display an appropriate message when the user guesses the correct number
+
+class GuessingGame
+  attr_accessor :a
+ def initialize(a)
+  @a=   a
+ end
+
+ def display 
+     puts"Please guess any number! in between 1 to 10"
+     i=10
+     while i>0 
+         c=gets.chomp.to_i
+     if (c == a)
+         puts "Congratulation You Are Right!"
+         break
+     else 
+         puts "Better Luck Next Time! ,\"Think Again!\""
+     end 
+     i-=1
+ end
+end
+
+ 
+end
+store=rand(1..10)
+guess = GuessingGame.new(store)
+guess.display
+# guess.guess
+
+# **Object Comparison:** Create a class called "Student" with attributes for name and score. Implement a method to compare two student objects based on their scores and return the student with the higher score. Create objects of the class and demonstrate the comparison method.
+
+
+class Student 
+  attr_accessor :name, :score
+  def initialize(name, score)
+    @name = name 
+    @score = score 
+  end
+
+  def compare(stu ,stu1)
+    # puts stu
+    # puts stu1
+    if (stu.score == stu1.score)
+      puts stu.name
+      puts "equal"
+    else 
+      puts "not equal"
+    end
+
+  end
+  
+end
+
+stu = Student.new("Shubhank", 300) 
+stu1 = Student.new("Paritosh", 400)
+stu.compare(stu,stu1)
+#  Student.compare(stu,stu1) #must use self to access
+
+
+
+
+
+
+
+
+

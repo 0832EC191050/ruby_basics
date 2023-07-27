@@ -1,26 +1,38 @@
 # **Object Interaction:** Create a class called "BankAccount" with attributes for account number and balance. Implement methods to deposit and withdraw money from the account. Create multiple objects of the class and demonstrate the interaction between them by transferring money from one account to another.
  
 class BankAccount 
-     attr_accessor :account_number, :balance  
-     def initialize(account_number, balance)
-        @account_number = account_number
-        @balance = balance 
-     end
-     
-     def withdraw_money(b)
-        puts"money withdraw is: #{b.balance}" 
-     end 
+  attr_accessor :acct_number, :balance
 
-     def deposit_money(b, b1)
-      #   b1.account_number = b.balance
-        puts"money deposited is: #{b1.balance} to account number-#{b1.account_number}"
-        total = b.balance+b1.balance
-        puts "now the total balance is #{total}" 
-     end
+  def initialize(acct_number, balance)
+    @acct_number = acct_number
+    @balance = balance 
+  end
+  
+  def withdraw(amount)
+    if @balance >= amount
+      @balance -= amount
+    else
+      raise 'Insufficient Balance!'
+    end
+  end 
+
+  def deposit(amount)
+    raise 'raise an exception'
+    @balance += amount
+  end
+
+  def transfer(account, amount)
+    account.withdraw(amount)
+    deposit(amount)
+  rescue => e
+    e.message
+  end
 
 end 
 
-b = BankAccount.new(123456789, 500)
-b1 = BankAccount.new(12345689, 600)
-b.withdraw_money(b)
-b1.deposit_money(b, b1)
+account1 = BankAccount.new(1234, 700) 
+account2 = BankAccount.new(1432, 400)
+
+p account1.transfer(account2, 100)
+p account1.balance
+p account2.balance
